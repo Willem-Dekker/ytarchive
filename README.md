@@ -17,7 +17,8 @@ If they work, great. If not, too bad.
 
 ## Usage
 
-`--potoken` is REQUIRED. Read [yt-dlp docs](https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide#guide-providing-a-po-token-manually-for-use-with-mweb-client) for a guide on getting one.
+`--potoken` is REQUIRED. Without one you will almost certainly encounter issues in regards to "Video details not found."
+Read [yt-dlp docs](https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide#guide-providing-a-po-token-manually-for-use-with-mweb-client) for a guide on getting a PO token.
 
 ```
 usage: ytarchive [OPTIONS] [url] [quality]
