@@ -12,7 +12,12 @@ Download the latest pre-release from [the releases page](https://github.com/Keth
 
 Alternatively, if you have Go properly installed and set up, run `go install github.com/Kethsar/ytarchive@dev`
 
+Note that only the main Linux and Windows builds are supported. The other builds are provided for convenience, but I offer zero support for them.
+If they work, great. If not, too bad.
+
 ## Usage
+
+`--potoken` is REQUIRED. Read [yt-dlp docs](https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide#guide-providing-a-po-token-manually-for-use-with-mweb-client) for a guide on getting one.
 
 ```
 usage: ytarchive [OPTIONS] [url] [quality]
@@ -180,7 +185,7 @@ Options:
 
 	--potoken <PO TOKEN>
 		PO Token from your browser, basically required along with cookies these days.
-		Refer to https://github.com/yt-dlp/yt-dlp/wiki/Extractors#po-token-guide
+		Refer to https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide#guide-providing-a-po-token-manually-for-use-with-mweb-client
 
 	--proxy <SCHEME>://[<USER>:<PASS>@]<HOST>:<PORT>
 		Specify a proxy to use for downloading. e.g.

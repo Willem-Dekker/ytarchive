@@ -211,7 +211,7 @@ Options:
 
 	--potoken <PO TOKEN>
 		PO Token from your browser, basically required along with cookies these days.
-		Refer to https://github.com/yt-dlp/yt-dlp/wiki/Extractors#po-token-guide
+		Refer to https://github.com/yt-dlp/yt-dlp/wiki/PO-Token-Guide#guide-providing-a-po-token-manually-for-use-with-mweb-client
 
 	--proxy <SCHEME>://[<USER>:<PASS>@]<HOST>:<PORT>
 		Specify a proxy to use for downloading. e.g.
