@@ -76,6 +76,11 @@ Options:
 		Pass in the given url as the audio fragment url. Must be a
 		Google Video url with an itag parameter of 140.
 
+	--av1
+		If there is an AV1 version of your selected video quality,
+		download that instead of the usual h264. Takes precedence
+		over VP9 as well.
+
 	--capture-duration DURATION or TIMESTRING
 		Captures a livestream for the specified length of time 
 		and then exits and finalizes the video.
@@ -454,6 +459,7 @@ var (
 	separateAudio     bool
 	monitorChannel    bool
 	vp9               bool
+	av1               bool
 	h264              bool
 	membersOnly       bool
 	disableSaveState  bool
@@ -494,6 +500,7 @@ func init() {
 	cliFlags.BoolVar(&debug, "debug", false, "Debug logging output.")
 	cliFlags.BoolVar(&trace, "trace", false, "Trace logging output.")
 	cliFlags.BoolVar(&vp9, "vp9", false, "Download VP9 video if available.")
+	cliFlags.BoolVar(&av1, "av1", false, "Download AV1 video if available. Takes priority.")
 	cliFlags.BoolVar(&h264, "h264", false, "Only download h264 qualities.")
 	cliFlags.BoolVar(&addMeta, "add-metadata", false, "Write metadata to the final file.")
 	cliFlags.BoolVar(&writeDesc, "write-description", false, "Write description to a separate file.")
@@ -596,6 +603,7 @@ func run() int {
 	InitializeHttpClient(proxyUrl)
 
 	info.VP9 = vp9
+	info.AV1 = av1
 	info.H264 = h264
 	info.RetrySecs = retrySecs
 	info.FragMaxTries = fragMaxTries
